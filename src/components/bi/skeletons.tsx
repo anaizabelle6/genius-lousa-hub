@@ -30,7 +30,7 @@ export function SectionSkeleton({ variant = "charts" }: { variant?: "kpi" | "cha
                 <Block className="mt-2 h-2.5 w-56" />
                 <div className="mt-4 flex h-[210px] items-end gap-3">
                   {Array.from({ length: 7 }).map((_, j) => (
-                    <Block key={j} className="flex-1" style={undefined} />
+                    <Block key={j} className="w-full flex-1" />
                   ))}
                 </div>
               </div>
