@@ -324,7 +324,7 @@ function Workspace() {
               <Button
                 variant="outline"
                 size="sm"
-                className="absolute left-4 top-[74px] z-20 h-7 gap-1.5"
+                className="absolute bottom-5 left-5 z-20 h-8 gap-1.5 shadow-raised"
                 onClick={() => {
                   setExpanded(false);
                   setChatCollapsed(false);
@@ -337,7 +337,7 @@ function Workspace() {
               <Button
                 variant="ghost"
                 size="sm"
-                className="absolute left-2 top-[74px] z-20 h-7 gap-1.5 text-muted-foreground"
+                className="absolute bottom-5 left-5 z-20 h-8 gap-1.5 bg-surface text-muted-foreground shadow-card"
                 onClick={() => setChatCollapsed(true)}
               >
                 <PanelLeftClose className="size-3.5" />
