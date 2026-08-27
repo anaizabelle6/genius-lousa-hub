@@ -21,8 +21,8 @@ export interface ChatMessage {
   id: string;
   role: "user" | "genius";
   text: string;
-  steps?: AgentStep[];
-  result?: { dashboardId: string; widgetCount: number; title: string };
+  steps?: AgentStep[] | undefined;
+  result?: { dashboardId: string; widgetCount: number; title: string } | undefined;
 }
 
 interface Props {

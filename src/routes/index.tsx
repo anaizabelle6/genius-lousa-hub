@@ -22,9 +22,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    panel: typeof search["panel"] === "string" ? (search["panel"] as string) : undefined,
-  }),
+  validateSearch: (search: Record<string, unknown>): { panel?: string } =>
+    typeof search["panel"] === "string" ? { panel: search["panel"] as string } : {},
   head: () => ({
     meta: [
       { title: "ME Genius · Assistente de BI para compras" },
@@ -102,7 +101,7 @@ function Workspace() {
               },
             ],
       );
-      void navigate({ to: "/", search: {}, replace: true });
+      void navigate({ to: "/", search: () => ({}), replace: true });
     }
   }, [panelParam, store.panels, navigate]);
 
