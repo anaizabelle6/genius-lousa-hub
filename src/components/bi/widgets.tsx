@@ -210,8 +210,8 @@ export function WidgetContent({
       return <MetricCard widget={widget} />;
     case "status-distribution":
       return (
-        <div className="flex h-full flex-col px-4 pb-4">
-          <div style={{ height }} className="min-h-0 flex-1">
+        <div className="px-4 pb-4">
+          <div style={{ height }}>
             {variant === "donut" ? (
               <DonutChart data={series} format={widget.format} />
             ) : variant === "vertical" ? (
